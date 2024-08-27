@@ -1,43 +1,90 @@
 .side-nav {
     position: fixed;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 2rem;
+    bottom: 2rem;
     z-index: 1000;
   }
   
   .side-nav nav {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-end;
+    gap: 1rem;  /* Increased gap to accommodate mini clouds */
   }
   
-  .side-nav a {
+  .side-nav .cloud-item {
+    text-decoration: none;
+    color: #000000;
+    transition: transform 0.3s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;  
+    height: 80px; 
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
+    justify-content: center;
+    position: relative;
+    filter: brightness(1.2);  
   }
   
-  .side-nav a:hover {
-    color: #007bff;
+  .side-nav .cloud-item:hover {
+    transform: scale(1.05);
   }
   
   .side-nav .item-number {
     font-weight: bold;
     margin-right: 0.5rem;
-  }
-  
-  .side-nav .item-label {
-    display: none;
     font-size: 0.875rem;
   }
   
-  .side-nav a.active .item-label {
-    display: inline;
+  .side-nav .item-label {
+    font-size: 0.875rem;
   }
   
-  .side-nav a.active {
-    color: #007bff;
+  .side-nav .cloud-item.active .item-number,
+  .side-nav .cloud-item.active .item-label {
+    font-weight: bold; 
+    font-size: 1rem;
+    color: #006989; 
+  }
+  
+  .mini-cloud-trail {
+    position: relative;
+    height: 80px;  /* Increased height to accommodate zigzag pattern */
+    width: 50px;   /* Added width to constrain horizontal spread */
+    margin-right: 25px;  /* Adjusted to align with main clouds */
+  }
+  
+  .mini-cloud {
+    position: absolute;
+    width: 20px;  
+    height: 10px;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;  
+  }
+  
+  @media (max-width: 768px) {
+    .side-nav {
+      right: 1rem;
+      bottom: 1rem;
+    }
+    
+    .side-nav .cloud-item {
+      width: 120px; 
+      height: 64px;
+    }
+  
+    .mini-cloud-trail {
+      height: 80px; 
+      width: 80px;
+      margin-right: 20px; 
+    }
+  
+    .mini-cloud {
+      width: 15px; 
+      height: 7.5px;
+    }
   }

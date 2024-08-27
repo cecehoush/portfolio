@@ -27,7 +27,6 @@ const NavBar = () => {
       left: '50%',
       xPercent: -50,
       zIndex: 1000,
-      backgroundColor: 'rgba(255, 255, 255, 1)' // Initial fully opaque
     });
     gsap.set(navContainerElement, { maxWidth: '1200px' });
 
@@ -36,7 +35,7 @@ const NavBar = () => {
       end: 'max',
       onUpdate: (self) => {
         if (self.direction === 1 && !isNarrow && self.scroll() > 100) {
-          // Scrolling down and navbar is full width, narrow it and pop it down
+          // Scrolling down, navbar is full width, narrow & pop it down
           if (!hasAnimated) {
             gsap.to(navElement, { 
               y: '20px',
@@ -45,8 +44,8 @@ const NavBar = () => {
               onComplete: () => {
                 gsap.to(navElement, {
                   width: '60%',
-                  borderRadius: '0 0 10px 10px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.8)', // Add opacity
+                  borderRadius: '10px 10px 10px 10px',
+                  backgroundColor: 'rgba(116, 140, 171, 0.8)', 
                   duration: 0.3
                 });
               }
@@ -55,20 +54,19 @@ const NavBar = () => {
           } else {
             gsap.to(navElement, { 
               width: '80%',
-              borderRadius: '0 0 10px 10px',
-              backgroundColor: 'rgba(255, 255, 255, 0.8)', // Add opacity
+              borderRadius: '10px 10px 10px 10px',
+              backgroundColor: 'rgba(116, 140, 171, 0.8)', 
               duration: 0.3
             });
           }
           gsap.to(navContainerElement, { maxWidth: '960px', duration: 0.3 });
           isNarrow = true;
         } else if (self.direction === -1 && isNarrow && self.scroll() <= 100) {
-          // Scrolling up and near the top, restore to full width
+          // Scrolling up, at top put back to full width
           gsap.to(navElement, { 
             y: 0,
             width: '100%', 
             borderRadius: '0', 
-            backgroundColor: 'rgba(255, 255, 255, 1)', // Fully opaque
             duration: 0.3 
           });
           gsap.to(navContainerElement, { maxWidth: '1200px', duration: 0.3 });
@@ -89,7 +87,7 @@ const NavBar = () => {
   return (
     <nav ref={navRef} className="navbar">
       <div ref={navContainerRef} className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={handleHomeClick} ref={logoRef}>Logo</Link>
+        <Link to="/" className="navbar-logo" onClick={handleHomeClick} ref={logoRef}>Cece Housh</Link>
         <ul className="navbar-menu">
           {['Home', 'Portfolio', 'Roadmap', 'Nej', 'Contact'].map((item, index) => (
             <li key={item}>

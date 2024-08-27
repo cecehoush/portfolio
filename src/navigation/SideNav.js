@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './SideNav.css';
+import cloudImage from '../assets/cloud.png';
 
 const SideNav = () => {
   const [activeSection, setActiveSection] = useState('01');
@@ -38,19 +39,43 @@ const SideNav = () => {
     }
   };
 
+  const renderMiniClouds = (index) => {
+    const isActive = navItems[index].id === activeSection;
+    if (!isActive) return null;
+
+    return (
+      <div className="mini-cloud-trail">
+        {[...Array(5)].map((_, i) => (
+          <div 
+            key={i} 
+            className="mini-cloud" 
+            style={{ 
+              backgroundImage: `url(${cloudImage})`,
+              right: `${i % 2 === 1 ? 20 : 40}px`, 
+              top: `${i * 20 + Math.random() * 10 - 5}px`  // random vertical placement
+            }} 
+          />
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="side-nav">
       <nav>
-        {navItems.map((item) => (
-          <a
-            key={item.id}
-            href={`#${item.target}`}
-            onClick={(e) => handleClick(e, item.target)}
-            className={activeSection === item.id ? 'active' : ''}
-          >
-            <span className="item-number">{item.id}</span>
-            <span className="item-label">{item.label}</span>
-          </a>
+        {navItems.map((item, index) => (
+          <React.Fragment key={item.id}>
+            <a
+              href={`#${item.target}`}
+              onClick={(e) => handleClick(e, item.target)}
+              className={`cloud-item ${activeSection === item.id ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${cloudImage})` }}
+            >
+              <span className="item-number">{item.id}</span>
+              <span className="item-label">{item.label}</span>
+            </a>
+            {renderMiniClouds(index)}
+          </React.Fragment>
         ))}
       </nav>
     </div>
