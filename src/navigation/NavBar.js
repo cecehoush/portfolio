@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './NavBar.css';
@@ -25,7 +26,8 @@ const NavBar = () => {
       top: 0,
       left: '50%',
       xPercent: -50,
-      zIndex: 1000
+      zIndex: 1000,
+      backgroundColor: 'rgba(255, 255, 255, 1)' // Initial fully opaque
     });
     gsap.set(navContainerElement, { maxWidth: '1200px' });
 
@@ -42,8 +44,9 @@ const NavBar = () => {
               ease: 'power1.out',
               onComplete: () => {
                 gsap.to(navElement, {
-                  width: '80%',
+                  width: '60%',
                   borderRadius: '0 0 10px 10px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)', // Add opacity
                   duration: 0.3
                 });
               }
@@ -53,6 +56,7 @@ const NavBar = () => {
             gsap.to(navElement, { 
               width: '80%',
               borderRadius: '0 0 10px 10px',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)', // Add opacity
               duration: 0.3
             });
           }
@@ -64,6 +68,7 @@ const NavBar = () => {
             y: 0,
             width: '100%', 
             borderRadius: '0', 
+            backgroundColor: 'rgba(255, 255, 255, 1)', // Fully opaque
             duration: 0.3 
           });
           gsap.to(navContainerElement, { maxWidth: '1200px', duration: 0.3 });
@@ -74,14 +79,27 @@ const NavBar = () => {
     });
   }, []);
 
+  const handleHomeClick = (e) => {
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav ref={navRef} className="navbar">
       <div ref={navContainerRef} className="navbar-container">
-        <a href="/" ref={logoRef} className="navbar-logo">Logo</a>
+        <Link to="/" className="navbar-logo" onClick={handleHomeClick} ref={logoRef}>Logo</Link>
         <ul className="navbar-menu">
-          {['Home', 'About', 'Nej', 'Contact'].map((item, index) => (
+          {['Home', 'Portfolio', 'Roadmap', 'Nej', 'Contact'].map((item, index) => (
             <li key={item}>
-              <a href={`/${item.toLowerCase()}`} ref={el => menuItemsRef.current[index] = el}>{item}</a>
+              <Link 
+                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                ref={el => menuItemsRef.current[index] = el}
+                onClick={item === 'Home' ? handleHomeClick : undefined}
+              >
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
