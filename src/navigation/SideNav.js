@@ -8,6 +8,7 @@ const SideNav = () => {
   const navItems = [
     { id: '01', label: 'Welcome', target: 'welcome' },
     { id: '02', label: 'About', target: 'about' },
+    { id: '03', label: 'Nej', target: 'nej' },
   ];
 
   useEffect(() => {
