@@ -2,7 +2,8 @@ import React from 'react';
 
 const styles = {
   container: {
-    backgroundColor: '#1D2D44',
+    backgroundColor: '#748CAB',
+    // backgroundColor: '#1D2D44',
     color: '#fff',
     minHeight: '100vh', 
   },

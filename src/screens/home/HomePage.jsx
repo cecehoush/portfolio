@@ -16,6 +16,10 @@ const HomePage = () => {
                     <h2>About Me</h2>
                     <p>This is the about me section...</p>
                 </section>
+                <section id="nej" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <h2>Nej</h2>
+                    <p>This is the Nej section...</p>
+                </section>
             </main>
         </div>
     );
