@@ -50,7 +50,7 @@ const NavBar = () => {
                   backgroundColor: 'rgba(255, 255, 255, 0.8)', 
                   duration: 0.3
                 });
-                // Animate name disappearance
+                // name disappears
                 gsap.to(nameElement, {
                   width: 0,
                   opacity: 0,
@@ -79,7 +79,7 @@ const NavBar = () => {
             backgroundColor: '#fcf6f5' 
           });
           gsap.to(navContainerElement, { maxWidth: '1200px', duration: 0.3 });
-          // Animate name reappearance
+          // name comes back
           gsap.to(nameElement, {
             width: 'auto',
             opacity: 1,
@@ -108,7 +108,7 @@ const NavBar = () => {
           <span className="navbar-name" ref={nameRef}>Cece Housh</span>
         </Link>
         <ul className="navbar-menu">
-          {['Home', 'Portfolio', 'Roadmap', 'Nej', 'Contact'].map((item, index) => (
+          {['Home', 'Portfolio', 'Roadmap', 'Contact'].map((item, index) => (
             <li key={item}>
               <Link 
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 

@@ -53,7 +53,7 @@ const SideNav = () => {
             style={{ 
               backgroundImage: `url(${cloudImage})`,
               right: `${i % 2 === 1 ? 20 : 40}px`, 
-              top: `${i * 20 + Math.random() * 10 - 5}px`  // random vertical placement
+              top: `${i * 20 + Math.random() * 10 - 5}px`  // random vertical cloud placement
             }} 
           />
         ))}

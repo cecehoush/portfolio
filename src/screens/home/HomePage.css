@@ -1,0 +1,128 @@
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cloud-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cloud-background img {
+    position: absolute;
+}
+
+.cloud-background .main-cloud {
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+}
+
+.cloud-background .left-cloud {
+    top: 30%;
+    left: 27%;
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
+.cloud-background .right-cloud {
+    top: 20%;
+    right: 32%;
+    transform: translate(50%, -50%) scale(0.7);
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.233);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nej {
+    width: 200px;
+    height: 200px;
+    overflow: visible; 
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center the nej container */
+}
+
+.nej-picture {
+    top: 35px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.nej-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nej-cloud {
+    position: absolute;  
+    top: 75%;           
+    left: 50%;           
+    transform: translateX(-50%); 
+    width: 150px;
+    height: 50px;
+    z-index: 3; 
+    opacity: 0.9; 
+}
+
+#nej.full-height-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.full-height-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
