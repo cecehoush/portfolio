@@ -1,0 +1,25 @@
+.roadmap-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.roadmap-container main {
+    padding: 80px 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.threejs-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+h1, p {
+    color: #fff; /* Adjust this color if needed for better contrast with the brighter scene */
+}
