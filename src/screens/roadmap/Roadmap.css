@@ -21,5 +21,77 @@
 }
 
 h1, p {
-    color: #fff; /* Adjust this color if needed for better contrast with the brighter scene */
+    color: #fff;
+}
+
+.start-journey-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.start-journey-button:hover {
+    background-color: #45a049;
+}
+
+.text-box {
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 20px);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.text-box.focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 3;
+    filter: blur(0);
+}
+
+.text-box.focus h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.text-box.focus p {
+    color: #666;
+}
+
+.text-box.background {
+    transform: translate(calc(-50% + 50px), -30%);
+    background-color: rgba(255, 255, 255, 0.6);
+    filter: blur(2px);
+    z-index: 2;
+    cursor: default;
+}
+
+.text-box.background:nth-of-type(3) {
+    transform: translate(calc(-50% + 100px), -20%);
+}
+
+.text-box.background:nth-of-type(4) {
+    transform: translate(calc(-50% + 150px), -10%);
+}
+
+.text-box.background:hover {
+    filter: blur(1px);
+}
+
+.text-box.background h2,
+.text-box.background p {
+    color: #999;
 }
