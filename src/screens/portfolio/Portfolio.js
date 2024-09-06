@@ -17,12 +17,11 @@ const Portfolio = () => {
         {
             title: "Full Stack Developer Intern",
             company: "MSU Denver",
-            date: "June 2024 — August 2024",
+            date: "June 2024 — Present",
             details: [
-                "Collaborated on 'Roadrunner Connect,' an interactive campus map app",
-                "Developed front-end and back-end components using Flutter and Dart",
-                "Implemented check-in system, comment/photo uploads, and rewards system",
-                "Employed Agile methodologies and used Git/GitHub for version control"
+                "Collaborated on 'Roadrunner Connect', an interactive campus map app designed to enhance community engagement. Involved in designing the user interface, and developing both front-end and back-end components using Flutter and Dart.",
+                "Implemented a check-in system, comment/photo uploads, and a rewards system (raffles, contests, leaderboards, badges, challenges) to incentivize participation.",
+                "Employed Agile methodologies in a team of 5, managing tasks and progress through ZenHub. Utilized Git and GitHub for version control and collaboration, ensuring efficient project execution and team collaboration."
             ]
         },
         {
@@ -30,9 +29,8 @@ const Portfolio = () => {
             company: "Sustainability Hub, MSU Denver",
             date: "September 2023 — June 2024",
             details: [
-                "Worked on NSF-funded initiative focused on sustainability data analysis",
-                "Created UI/UX design for sustainability hub application prototype",
-                "Developed machine learning models to identify patterns in sustainability data"
+                "Sustainability Hub is a National Science Foundation-funded initiative, focused on sustainability data analysis, application prototyping, and machine learning model development under the guidance of the project manager.",
+                "Worked in an Agile environment with a team of 6 researchers creating the UI/UX design to implement a prototype for the sustainability hub application and develop machine learning models to identify patterns within sustainability data, enhancing the project's objectives towards sustainability, data democracy, and inclusivity."
             ]
         },
         {
@@ -40,9 +38,20 @@ const Portfolio = () => {
             company: "MSU Denver",
             date: "January 2024 — Present",
             details: [
-                "Peer mentor/tutor in CS and Math (Discrete Structures and Computer Science 1)",
-                "Assisted in lectures, held weekly office hours, and supported students"
+                "Worked as a peer mentor/tutor in the areas of Computer Science and Math (specifically Discrete Structures and Computer Science 1), assisting in lectures, holding weekly office hours, and supporting students with concepts, homework, and projects."
             ]
+        },
+        {
+            title: "Assistant Store Leader (ASL)",
+            company: "GameStop",
+            date: "April 2023 — May 2024",
+            details: []
+        },
+        {
+            title: "Supervisor",
+            company: "Concession Staffing Stands (CSS)",
+            date: "July 2021 — December 2023",
+            details: []
         }
     ];
 
@@ -107,18 +116,21 @@ const Portfolio = () => {
             name: "Alyssa Williams",
             phone: "720-470-3778",
             email: "awilliams7529@gmail.com",
-            linkedin: "linkedin.com/in/chillyssa"
+            linkedin: "linkedin.com/in/chillyssa",
+            relationship: "Project Manager and mentor during my undergraduate research for the Sustainability Hub"
         },
         {
             name: "Daniel Pittman, Ph.D., CISSP",
             phone: "303-789-9179",
             email: "depittman@gmail.com",
-            linkedin: "linkedin.com/in/danpittman1"
+            linkedin: "linkedin.com/in/danpittman1",
+            relationship: "Previous professor and the Project Director (Principal Investigator) for my undergraduate research for the Sustainability Hub and Roadrunner Connect internship"
         },
         {
             name: "Steve Geinitz",
             email: "geinitz@gmail.com",
-            linkedin: "linkedin.com/in/geinitz"
+            linkedin: "linkedin.com/in/geinitz",
+            relationship: "Professor for several of my core Computer Science courses and independent studies"
         }
     ];
 
@@ -224,6 +236,7 @@ const Portfolio = () => {
                         <div className="reference-header">
                             <div>Name</div>
                             <div>Contact Information</div>
+                            <div>Relationship</div>
                         </div>
                         {referencesData.map((reference, index) => (
                             <div key={index} className="reference-row">
@@ -233,6 +246,7 @@ const Portfolio = () => {
                                     <p>✉️ <a href={`mailto:${reference.email}`}>{reference.email}</a></p>
                                     <p>🔗 <a href={`https://www.${reference.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
                                 </div>
+                                <div className="reference-relationship">{reference.relationship}</div>
                             </div>
                         ))}
                     </div>

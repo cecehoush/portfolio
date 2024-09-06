@@ -4,13 +4,17 @@
     color: #333;
 }
 
-main {
+.portfolio-container main {
     padding: 80px 20px 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.experience, .skills, .education {
+.portfolio-container .experience,
+.portfolio-container .skills,
+.portfolio-container .awards,
+.portfolio-container .education,
+.portfolio-container .references {
     margin-top: 60px;
 }
 
@@ -24,7 +28,7 @@ main {
 }
 
 /* Work Experience Section */
-.experience-item {
+.portfolio-container .experience-item {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -33,54 +37,54 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-item:hover {
+.portfolio-container .experience-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.experience-item h3 {
+.portfolio-container .experience-item h3 {
     font-size: 1.4rem;
     color: #990012;
     margin-bottom: 10px;
 }
 
-.experience-item .company {
+.portfolio-container .experience-item .company {
     font-size: 1.1rem;
     font-weight: bold;
     color: #444;
     margin-bottom: 5px;
 }
 
-.experience-item .date {
+.portfolio-container .experience-item .date {
     font-size: 0.9rem;
     color: #888;
     margin-bottom: 10px;
 }
 
-.experience-item ul {
+.portfolio-container .experience-item ul {
     padding-left: 20px;
 }
 
-.experience-item li {
+.portfolio-container .experience-item li {
     margin-bottom: 5px;
     line-height: 1.4;
 }
 
 /* Skills Section */
-.skills-container {
+.portfolio-container .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.skill-category {
+.portfolio-container .skill-category {
     background-color: #fff;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.skill-category h3 {
+.portfolio-container .skill-category h3 {
     font-size: 1.2rem;
     color: #990012;
     margin-bottom: 15px;
@@ -88,13 +92,13 @@ main {
     padding-bottom: 5px;
 }
 
-.skill-tags {
+.portfolio-container .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.skill-tag {
+.portfolio-container .skill-tag {
     background-color: #f0f0f0;
     color: #333;
     padding: 5px 10px;
@@ -103,20 +107,20 @@ main {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.skill-tag:hover {
+.portfolio-container .skill-tag:hover {
     background-color: #990012;
     color: #fff;
     transform: translateY(-2px);
 }
 
 /* Awards Section */
-.awards-container {
+.portfolio-container .awards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.award-item {
+.portfolio-container .award-item {
     background-color: #fff;
     border-radius: 20px;
     padding: 0px 10px 10px 10px;
@@ -124,23 +128,23 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.award-item:hover {
+.portfolio-container .award-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.award-item h3 {
+.portfolio-container .award-item h3 {
     font-size: 1.2rem;
     color: #990012;
 }
 
-.award-item p {
+.portfolio-container .award-item p {
     font-size: 0.9rem;
     color: #333;
     text-align: center;
 }
 
-.award-item a {
+.portfolio-container .award-item a {
     display: inline-block;
     color: #990012;
     text-decoration: none;
@@ -149,17 +153,17 @@ main {
     transition: color 0.3s ease;
 }
 
-.award-item a:hover {
+.portfolio-container .award-item a:hover {
     color: #660000;
 }
 
 /* Education Section */
-.education-timeline {
+.portfolio-container .education-timeline {
     position: relative;
     padding: 20px 0;
 }
 
-.education-dot {
+.portfolio-container .education-dot {
     position: absolute;
     top: 20px;
     left: -8px;
@@ -171,7 +175,7 @@ main {
     box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.meter {
+.portfolio-container .meter {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -180,13 +184,13 @@ main {
     background-color: #990012;
 }
 
-.education-item {
+.portfolio-container .education-item {
     position: relative;
     margin-bottom: 40px;
     padding-left: 30px;
 }
 
-.education-content {
+.portfolio-container .education-content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -196,103 +200,132 @@ main {
     transition: transform 0.3s ease;
 }
 
-.education-content:hover {
+.portfolio-container .education-content:hover {
     transform: translateY(-5px);
 }
 
-.education-content h3 {
+.portfolio-container .education-content h3 {
     font-size: 1.4rem;
     color: #990012;
     margin-bottom: 10px;
 }
 
-.education-content .degree {
+.portfolio-container .education-content .degree {
     font-size: 1.1rem;
     color: #444;
     margin-bottom: 5px;
 }
 
-.education-content .degree strong {
+.portfolio-container .education-content .degree strong {
     font-weight: 700;
 }
 
-.education-content .gpa {
+.portfolio-container .education-content .gpa {
     font-weight: normal;
     color: #666;
 }
 
-.education-content .date {
+.portfolio-container .education-content .date {
     font-size: 0.9rem;
     color: #888;
 }
 
-@media (max-width: 768px) {
-    .education-content, .experience-item, .skill-category {
-        max-width: 100%;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .awards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .reference-header, .reference-row {
-        grid-template-columns: 1fr;
-    }
-
-    .reference-name {
-        margin-bottom: 10px;
-    }
-}
 /* References Section */
-.references-table {
+.portfolio-container .references-table {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.reference-header {
+.portfolio-container .reference-header {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #990012;
     color: #fff;
     font-weight: bold;
     padding: 15px;
 }
 
-.reference-row {
+.portfolio-container .reference-row {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.reference-row:last-child {
+.portfolio-container .reference-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.portfolio-container .reference-row:last-child {
     border-bottom: none;
 }
 
-.reference-name {
+.portfolio-container .reference-name {
     font-weight: bold;
     color: #333;
 }
 
-.reference-contact p {
+.portfolio-container .reference-contact p {
     margin: 5px 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-.reference-contact a {
+.portfolio-container .reference-contact a {
     color: #990012;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.reference-contact a:hover {
+.portfolio-container .reference-contact a:hover {
     color: #660000;
     text-decoration: underline;
+}
+
+.portfolio-container .reference-relationship {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-container .reference-header,
+    .portfolio-container .reference-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-container .reference-relationship {
+        grid-column: span 2;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container .education-content,
+    .portfolio-container .experience-item,
+    .portfolio-container .skill-category {
+        max-width: 100%;
+    }
+
+    .portfolio-container .skills-container,
+    .portfolio-container .awards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-container .reference-header,
+    .portfolio-container .reference-row {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-container .reference-name,
+    .portfolio-container .reference-contact,
+    .portfolio-container .reference-relationship {
+        margin-bottom: 10px;
+    }
+
+    .portfolio-container .reference-relationship {
+        grid-column: span 1;
+    }
 }
