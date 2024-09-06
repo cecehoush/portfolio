@@ -238,4 +238,61 @@ main {
     .awards-container {
         grid-template-columns: 1fr;
     }
+
+    .reference-header, .reference-row {
+        grid-template-columns: 1fr;
+    }
+
+    .reference-name {
+        margin-bottom: 10px;
+    }
+}
+/* References Section */
+.references-table {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.reference-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #990012;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.reference-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.reference-row:last-child {
+    border-bottom: none;
+}
+
+.reference-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.reference-contact p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.reference-contact a {
+    color: #990012;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.reference-contact a:hover {
+    color: #660000;
+    text-decoration: underline;
 }

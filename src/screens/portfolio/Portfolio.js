@@ -11,6 +11,7 @@ const Portfolio = () => {
     const skillsRef = useRef(null);
     const awardsRef = useRef(null);
     const educationRef = useRef(null);
+    const referencesRef = useRef(null);
 
     const workExperienceData = [
         {
@@ -101,6 +102,26 @@ const Portfolio = () => {
         }
     ];
 
+    const referencesData = [
+        {
+            name: "Alyssa Williams",
+            phone: "720-470-3778",
+            email: "awilliams7529@gmail.com",
+            linkedin: "linkedin.com/in/chillyssa"
+        },
+        {
+            name: "Daniel Pittman, Ph.D., CISSP",
+            phone: "303-789-9179",
+            email: "depittman@gmail.com",
+            linkedin: "linkedin.com/in/danpittman1"
+        },
+        {
+            name: "Steve Geinitz",
+            email: "geinitz@gmail.com",
+            linkedin: "linkedin.com/in/geinitz"
+        }
+    ];
+
     useEffect(() => {
         const animateSection = (triggerElement, items) => {
             gsap.set(items, { opacity: 0, y: 20 });
@@ -121,6 +142,7 @@ const Portfolio = () => {
         animateSection(skillsRef.current, '.skill-category');
         animateSection(awardsRef.current, '.award-item');
         animateSection(educationRef.current, '.education-item');
+        animateSection(referencesRef.current, '.reference-row');
     }, []);
 
     return (
@@ -195,6 +217,27 @@ const Portfolio = () => {
                         ))}
                     </div>
                 </section>
+
+                <section className="references" ref={referencesRef}>
+                    <h2>References</h2>
+                    <div className="references-table">
+                        <div className="reference-header">
+                            <div>Name</div>
+                            <div>Contact Information</div>
+                        </div>
+                        {referencesData.map((reference, index) => (
+                            <div key={index} className="reference-row">
+                                <div className="reference-name">{reference.name}</div>
+                                <div className="reference-contact">
+                                    {reference.phone && <p>📞 {reference.phone}</p>}
+                                    <p>✉️ <a href={`mailto:${reference.email}`}>{reference.email}</a></p>
+                                    <p>🔗 <a href={`https://www.${reference.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            
             </main>
         </div>
     );
