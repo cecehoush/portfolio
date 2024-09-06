@@ -109,6 +109,50 @@ main {
     transform: translateY(-2px);
 }
 
+/* Awards Section */
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.award-item {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0px 10px 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.award-item h3 {
+    font-size: 1.2rem;
+    color: #990012;
+}
+
+.award-item p {
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+}
+
+.award-item a {
+    display: inline-block;
+    color: #990012;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.award-item a:hover {
+    color: #660000;
+}
+
 /* Education Section */
 .education-timeline {
     position: relative;
@@ -188,6 +232,10 @@ main {
     }
 
     .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .awards-container {
         grid-template-columns: 1fr;
     }
 }

@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Portfolio = () => {
     const experienceRef = useRef(null);
     const skillsRef = useRef(null);
+    const awardsRef = useRef(null);
     const educationRef = useRef(null);
 
     const workExperienceData = [
@@ -55,6 +56,30 @@ const Portfolio = () => {
         "Other Skills": ["Microsoft Office Suite", "Google Workspace", "Markdown", "Project Management", "Technical Writing", "Public Speaking"]
     };
 
+    const awardsData = [
+        {
+            title: "DU/MSU Hackathon 2nd Place Award",
+            description: "I co-created 'SpiderByte,' a course-aligned coding challenge website, using Python, Flask, SQLAlchemy, HTML/CSS, PythonTutor, and CodeMirror during a 28-hour hackathon in a team.",
+            link: "https://github.com/cecehoush/BitsPlease-SpiderByte"
+        },
+        {
+            title: "Certificate: Fundamentals of Deep Learning with NVIDIA",
+            description: "I completed NVIDIA's Deep Learning course, gaining expertise in neural network fundamentals and practical implementation."
+        },
+        {
+            title: "Certificate: SQL Competition Winner",
+            description: "I won first place in MSU Denver's SQL competition for CS 3810 (Principles of Database Systems). I became the first woman to win this competition since it started, making history in a generally male-dominated field.",
+        },
+        {
+            title: "Provost's Honor Roll at MSU Denver",
+            description: "I was recognized for outstanding academic achievement at Metropolitan State University of Denver for each semester."
+        },
+        {
+            title: "Principal's Honor Roll at East High School",
+            description: "I was awarded a certificate for exceptional academic performance at Denver East High School in 2021."
+        }
+    ];
+
     const educationData = [
         {
             school: "Metropolitan State University of Denver",
@@ -94,6 +119,7 @@ const Portfolio = () => {
 
         animateSection(experienceRef.current, '.experience-item');
         animateSection(skillsRef.current, '.skill-category');
+        animateSection(awardsRef.current, '.award-item');
         animateSection(educationRef.current, '.education-item');
     }, []);
 
@@ -128,6 +154,23 @@ const Portfolio = () => {
                                         <span key={index} className="skill-tag">{skill}</span>
                                     ))}
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="awards" ref={awardsRef}>
+                    <h2>Awards & Achievements</h2>
+                    <div className="awards-container">
+                        {awardsData.map((award, index) => (
+                            <div key={index} className="award-item">
+                                <h3>{award.title}</h3>
+                                <p>{award.description}</p>
+                                {award.link && (
+                                    <a href={award.link} target="_blank" rel="noopener noreferrer">
+                                        View Project On GitHub
+                                    </a>
+                                )}
                             </div>
                         ))}
                     </div>
