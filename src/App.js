@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomePage from './screens/home/HomePage';
-import Portfolio from './screens/Portfolio';
+import Portfolio from './screens/portfolio/Portfolio';
 import Roadmap from './screens/roadmap/Roadmap';
 import Contact from './screens/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
