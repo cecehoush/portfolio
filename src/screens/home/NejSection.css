@@ -66,7 +66,7 @@
     z-index: 11;
     width: 200px;
     height: auto;
-    white-space: normal; /* for text wrap :o */
+    white-space: normal;
     text-align: center;
 }
 
@@ -101,4 +101,73 @@ h2 {
 
 .floating-nej.active {
     animation: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .nej-main-cloud {
+        width: 90%;
+    }
+
+    .floating-nej {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nej-fact {
+        width: 180px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nej-main-cloud {
+        width: 95%;
+    }
+
+    .floating-nej {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nej-fact {
+        width: 160px;
+    }
+
+    .nej-fact-text {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .nej-instruction {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .floating-nej {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nej-fact {
+        width: 140px;
+    }
+
+    .nej-fact-text {
+        font-size: 11px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .nej-instruction {
+        font-size: 0.8rem;
+    }
 }

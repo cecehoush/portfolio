@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,7 @@ const NavBar = () => {
   const logoRef = useRef(null);
   const nameRef = useRef(null);
   const menuItemsRef = useRef([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const navElement = navRef.current;
@@ -98,6 +99,11 @@ const NavBar = () => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -107,13 +113,21 @@ const NavBar = () => {
           <img src={Logo} alt="Logo" />
           <span className="navbar-name" ref={nameRef}>Cece Housh</span>
         </Link>
-        <ul className="navbar-menu">
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className="hamburger-line"></div>
+          <div className="hamburger-line"></div>
+          <div className="hamburger-line"></div>
+        </div>
+        <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           {['Home', 'Portfolio', 'Roadmap', 'Contact'].map((item, index) => (
             <li key={item}>
               <Link 
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
                 ref={el => menuItemsRef.current[index] = el}
-                onClick={item === 'Home' ? handleHomeClick : undefined}
+                onClick={() => {
+                  if (item === 'Home') handleHomeClick();
+                  setIsMenuOpen(false);
+                }}
               >
                 {item}
               </Link>

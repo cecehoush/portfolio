@@ -35,10 +35,8 @@
     -o-user-drag: none;
 }
 
-.cloud-background .left-cloud {
-    top: 30%;
-    left: 27%;
-    transform: translate(-50%, -50%) scale(0.6);
+.cloud-background .left-cloud,
+.cloud-background .right-cloud {
     user-select: none;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -46,15 +44,16 @@
     -o-user-drag: none;
 }
 
+.cloud-background .left-cloud {
+    top: 30%;
+    left: 27%;
+    transform: translate(-50%, -50%) scale(0.6);
+}
+
 .cloud-background .right-cloud {
     top: 20%;
     right: 32%;
     transform: translate(50%, -50%) scale(0.7);
-    user-select: none;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
 }
 
 .profile-picture {
@@ -78,45 +77,6 @@
     -moz-user-drag: none;
     -o-user-drag: none;
 }
-
-/* .nej {
-    width: 200px;
-    height: 200px;
-    overflow: visible; 
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; 
-}
-
-.nej-picture {
-    top: 35px;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-}
-
-.nej-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.nej-cloud {
-    position: absolute;  
-    top: 75%;           
-    left: 50%;           
-    transform: translateX(-50%); 
-    width: 150px;
-    height: 50px;
-    z-index: 3; 
-    opacity: 0.9; 
-} */
 
 #nej.full-height-section {
     display: flex;
@@ -162,4 +122,39 @@
 
 .social-icons a:hover {
     color: #990012;  
+}
+
+@media only screen and (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .cloud-background .left-cloud,
+    .cloud-background .right-cloud {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
 }

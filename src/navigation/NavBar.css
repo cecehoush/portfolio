@@ -82,3 +82,53 @@
 .navbar-menu a:hover {
     color: #990011;
 }
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fcf6f5;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar-name {
+        font-size: 1.2rem;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+    }
+}
