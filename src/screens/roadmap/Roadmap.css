@@ -1,4 +1,4 @@
-.roadmap-container {
+/* .roadmap-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -94,4 +94,12 @@ h1, p {
 .text-box.background h2,
 .text-box.background p {
     color: #999;
-}
+} */
+
+
+/* .roadmap-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+} */
