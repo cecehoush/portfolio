@@ -30,6 +30,7 @@
   width: 200px;
   height: 250px;
   perspective: 1000px;
+  margin-bottom: 10px;
 }
 
 .skill-card-inner {
@@ -100,54 +101,27 @@
 
 @media only screen and (max-width: 1024px) {
   .skill-cards-container {
-      gap: 3rem;
-  }
-  
-  .skill-card {
-      width: 180px;
-      height: 225px;
+    gap: 3rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about-me-container h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
   
   .about-me-container > p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
   
   .skill-cards-container {
-      gap: 2rem;
-  }
-  
-  .skill-card {
-      width: 150px;
-      height: 200px;
-  }
-  
-  .skill-card-front svg {
-      font-size: 2.5rem;
-  }
-  
-  .skill-card-front h3 {
-      font-size: 1rem;
-  }
-  
-  .skill-card-front p, .skill-card-back p {
-      font-size: 0.8rem;
+    gap: 2rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .skill-cards-container {
-      gap: 1rem;
-  }
-  
-  .skill-card {
-      width: 120px;
-      height: 160px;
-      padding: 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 }

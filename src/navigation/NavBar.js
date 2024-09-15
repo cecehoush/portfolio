@@ -129,8 +129,7 @@ const NavBar = () => {
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
                 ref={el => menuItemsRef.current[index] = el}
                 onClick={() => {
-                  if (item === 'Home') handleHomeClick();
-                  else scrollToTop();
+                  scrollToTop(); // Always scroll to the top
                   setIsMenuOpen(false);
                 }}
               >
