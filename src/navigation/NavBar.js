@@ -106,6 +106,10 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav ref={navRef} className="navbar">
       <div ref={navContainerRef} className="navbar-container">
@@ -126,6 +130,7 @@ const NavBar = () => {
                 ref={el => menuItemsRef.current[index] = el}
                 onClick={() => {
                   if (item === 'Home') handleHomeClick();
+                  else scrollToTop();
                   setIsMenuOpen(false);
                 }}
               >

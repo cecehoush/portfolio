@@ -100,14 +100,15 @@
 @media only screen and (max-width: 768px) {
     .navbar-menu {
         display: none;
-        position: absolute;
-        top: 80px;
+        position: fixed;
+        top: 85px;
         left: 0;
         width: 100%;
-        background-color: #fcf6f5;
+        height: calc(28vh - 80px);
+        background-color: rgba(255, 255, 255, 0.8);
         flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
+        overflow-y: auto;
+        border-radius: 10px;
     }
 
     .navbar-menu.active {
@@ -116,6 +117,8 @@
 
     .navbar-menu li {
         margin: 10px 0;
+        padding: 0px 0px 0px 10px;
+        width: 100%;
     }
 
     .hamburger-menu {
