@@ -28,18 +28,33 @@
     transform: translate(-50%, -50%);
     max-width: 100%;
     height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .cloud-background .left-cloud {
     top: 30%;
     left: 27%;
     transform: translate(-50%, -50%) scale(0.6);
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .cloud-background .right-cloud {
     top: 20%;
     right: 32%;
     transform: translate(50%, -50%) scale(0.7);
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .profile-picture {
@@ -57,9 +72,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
-.nej {
+/* .nej {
     width: 200px;
     height: 200px;
     overflow: visible; 
@@ -96,7 +116,7 @@
     height: 50px;
     z-index: 3; 
     opacity: 0.9; 
-}
+} */
 
 #nej.full-height-section {
     display: flex;
@@ -136,10 +156,10 @@
 }
 
 .social-icons a {
-    color: #fff;
+    color: #000;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #990011;  
+    color: #990012;  
 }

@@ -27,6 +27,11 @@
     height: 50px;
     border-radius: 10px;
     margin-right: 1rem;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .navbar-name {

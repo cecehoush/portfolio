@@ -5,9 +5,10 @@ import './HomePage.css';
 import myPicture from '../../assets/myPicture.jpg';
 import cloudImage2 from '../../assets/cloud2.png';
 import cloudImage from '../../assets/cloud.png';
-import nej from '../../assets/nej.png';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // FaPhone
 import { MdEmail } from 'react-icons/md';
+import AboutMe from './AboutMe';
+import NejSection from './NejSection';
 
 const HomePage = () => {
     return (
@@ -29,30 +30,21 @@ const HomePage = () => {
                         <a href="https://github.com/cecehoush" target="_blank" rel="noopener noreferrer"><FaGithub size={26} /></a>
                         <a href="https://instagram.com/cetsukii" target="_blank" rel="noopener noreferrer"><FaInstagram size={26} /></a>
                         <a href="mailto:carolannehoush@gmail.com"><MdEmail size={26} /></a>
+                        {/* <a href="tel:+7203299609"><FaPhone size={22} /></a> */}
                     </div>
                     <h1>Welcome to My Website!!</h1>
-                    <p>Here's a brief summary...</p>
+                    <p>Nice to meet you, I'm Carolanne Housh but I go by Cece!</p>
                 </section>
 
                 <hr className="border-t border-gray-300 my-8" />
 
                 <section id="about" className="full-height-section">
-                    <h2>About Me</h2>
-                    <p>I am a full stack developer and a UI/UX designer...</p>
+                    <AboutMe />
                 </section>
 
                 <hr className="border-t border-gray-300 my-8" />
 
-                <section id="nej" className="full-height-section">
-                    <div className="nej">
-                        <div className="nej-picture">
-                            <img src={nej} alt="nej" />
-                        </div>
-                        <img src={cloudImage2} alt="Nej Cloud" className="nej-cloud" />
-                    </div>
-                    <h2>Nej</h2>
-                    <p>This is the Nej section...</p>
-                </section>
+                <NejSection />
             </main>
         </div>
     );

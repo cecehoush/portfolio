@@ -15,8 +15,8 @@ const Portfolio = () => {
 
     const workExperienceData = [
         {
-            title: "Full Stack Developer Intern",
-            company: "MSU Denver",
+            title: "Full Stack Developer Internship",
+            company: "Roadrunner Connect, MSU Denver",
             date: "June 2024 — Present",
             details: [
                 "Collaborated on 'Roadrunner Connect', an interactive campus map app designed to enhance community engagement. Involved in designing the user interface, and developing both front-end and back-end components using Flutter and Dart.",
@@ -24,6 +24,21 @@ const Portfolio = () => {
                 "Employed Agile methodologies in a team of 5, managing tasks and progress through ZenHub. Utilized Git and GitHub for version control and collaboration, ensuring efficient project execution and team collaboration."
             ]
         },
+
+/*
+
+Full Stack Developer Intern, MSU Denver
+
+- Contributed to "Roadrunner Connect," an interactive campus map app to enhance community engagement, using Flutter (Dart) for mobile app development and React (JavaScript, CSS) for the accompanying website.
+- Implemented key features like event check-ins, photo uploads, and a rewards system (raffles, badges, contests, leaderboards) to drive user participation.
+- Integrated Firebase for authentication (Google and iOS sign-in), cloud storage, and analytics. Managed Firebase console for database and user authentication.
+- Led the deployment of the app on both iOS and Google Play platforms, ensuring adherence to Apple and Google guidelines.
+- Integrated Google Maps API for campus location mapping and Gravatar for team member profiles on the “About The Team” screen.
+- Collaborated with stakeholders in meetings and presentations, incorporating feedback to refine features.
+- Employed Agile methodologies using ZenHub for task management, Git/GitHub for version control, and worked across a stack involving MongoDB, Node.js, and Google APIs.
+
+*/
+
         {
             title: "Undergraduate Research Assistant",
             company: "Sustainability Hub, MSU Denver",
@@ -35,7 +50,7 @@ const Portfolio = () => {
         },
         {
             title: "Learning Assistant (LA)",
-            company: "MSU Denver",
+            company: "Discrete Structures and Computer Science 1, MSU Denver",
             date: "January 2024 — Present",
             details: [
                 "Worked as a peer mentor/tutor in the areas of Computer Science and Math (specifically Discrete Structures and Computer Science 1), assisting in lectures, holding weekly office hours, and supporting students with concepts, homework, and projects."
@@ -43,13 +58,13 @@ const Portfolio = () => {
         },
         {
             title: "Assistant Store Leader (ASL)",
-            company: "GameStop",
+            company: "GameStop, Aurora",
             date: "April 2023 — May 2024",
             details: []
         },
         {
             title: "Supervisor",
-            company: "Concession Staffing Stands (CSS)",
+            company: "Concession Staffing Stands (CSS), Elitch Gardens Denver",
             date: "July 2021 — December 2023",
             details: []
         }
@@ -60,7 +75,7 @@ const Portfolio = () => {
         "Web Technologies": ["HTML/CSS", "Flask", "React", "MongoDB", "Relational Databases", "Non-relational Databases"],
         "Tools & Frameworks": ["Git/GitHub", "Docker", "Heroku", "Postman", "Swagger", "Zenhub"],
         "Mobile Development": ["Flutter", "Mobile App Development"],
-        "Data Science & AI": ["Machine Learning", "Deep Learning", "TensorFlow/Keras"],
+        "Data Science & AI": ["Machine Learning", "Deep Learning", "Reinforcement Learning", "TensorFlow/Keras"],
         "Software Engineering": ["Scrum/Agile", "UI/UX Design", "Figma", "Lexical and Syntax Parsing"],
         "Professional Attributes": ["Communication Skills", "Metacognition", "Problem Solving", "Leadership", "Teamwork", "Adaptability", "Working Under Pressure", "Attention to Detail", "Effective Time Management",],
         "Other Skills": ["Microsoft Office Suite", "Google Workspace", "Markdown", "Project Management", "Technical Writing", "Public Speaking"]
@@ -124,7 +139,7 @@ const Portfolio = () => {
             phone: "303-789-9179",
             email: "depittman@gmail.com",
             linkedin: "linkedin.com/in/danpittman1",
-            relationship: "Previous professor and the Project Director (Principal Investigator) for my undergraduate research for the Sustainability Hub and Roadrunner Connect internship"
+            relationship: "Previous professor and the Principal Investigator for my undergraduate research for the Sustainability Hub and the Project Director for my Roadrunner Connect internship"
         },
         {
             name: "Steve Geinitz",
