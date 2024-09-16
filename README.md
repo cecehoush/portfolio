@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Cece Housh Personal Website/Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the repository for my personal website! This site serves as a comprehensive portfolio and personal showcase, featuring various aspects of my life, work, and interests. You can now visit the live site at [cecehoush.com](https://cecehoush.com).
 
-## Available Scripts
+## Table of Contents
+1. [Site Structure](#site-structure)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup and Installation](#setup-and-installation)
+5. [Future Plans](#future-plans)
+6. [Contact](#contact)
 
-In the project directory, you can run:
+## Site Structure
 
-### `npm start`
+My website consists of these key pages:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Home
+- Side navigation with cloud-themed buttons
+- Sections include:
+  - **Welcome**: Introduction with a picture of me and my social media links
+  - **About Me**: Personal interests of mine displayed on flippable cards (Get to know me!)
+  - **Ineji's World**: An interactive showcase of my cat, Ineji.. cause why not? :)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Portfolio
+- Serves as an extended and more in depth resume. My current resume is compressed to one page making it lose some key details, so this will fix that aspect!
+- Includes detailed information on my:
+  - Work experience
+  - Skills
+  - Awards and achievements
+  - Education
+  - References
 
-### `npm test`
+### Roadmap (Work in Progress)
+- Planned to be a 3D experience showcasing my journey (It's a surprise, so no spoilers!)
+- Currently under construction
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Contact
+- Features a contact form (from EmailJS)
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Responsive design with mobile-friendly navigation
+- GSAP animations in the top navigation bar
+- Interactive elements like flippable cards and clickable images
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React (Node.js, Javascript, CSS)
+- GSAP (GreenSock Animation Platform)
+- Three.js (planned for future use)
+- EmailJS
 
-### `npm run eject`
+## Setup and Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+While the website is now live at [cecehoush.com](https://cecehoush.com), you can also run it locally for development or testing purposes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```
+   git clone https://github.com/cecehoush/portfolio.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project directory:
+   ```
+   cd portfolio
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Plans
 
-### Code Splitting
+- Complete the Roadmap page with 3D elements using Three.js (Being vague on purpose.. it's a surprise!)
+- Add more interactive elements and animations
+- Expand the Portfolio section with project details and demos
+- Expand the About Me section and maybe add more flipping cards
+- Create a new logo
+- Fix a bug with routing :(
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
+Feel free to reach out to me through the contact form on my website or connect with me on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- LinkedIn: https://linkedin.com/in/cecehoush
+- GitHub: https://github.com/cecehoush
+- Instagram: https://instagram.com/cetsukii
+- Email: carolannehoush@gmail.com
 
-### Making a Progressive Web App
+<p align="left">
+  <a href="https://linkedin.com/in/cecehoush" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" /></a>
+  <a href="https://github.com/cecehoush" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="40" /></a>
+  <a href="https://instagram.com/cetsukii" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Instagram" height="30" width="40" /></a>
+  <a href="mailto:carolannehoush@gmail.com" target="_blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/google.svg" alt="Email" height="30" width="40" /></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting my personal website repository. I hope you enjoy exploring my digital space as much as I enjoyed creating it!!  ^-^
