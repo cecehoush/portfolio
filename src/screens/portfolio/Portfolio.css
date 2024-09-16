@@ -2,7 +2,7 @@
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0; 
     /* background-color: #e3e3e3; */
-    color: #333;
+    color: #000;
 }
 
 .portfolio-container main {
@@ -101,7 +101,7 @@
 
 .portfolio-container .skill-tag {
     background-color: #f0f0f0;
-    color: #333;
+    color: #000;
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9rem;
@@ -141,7 +141,7 @@
 
 .portfolio-container .award-item p {
     font-size: 0.9rem;
-    color: #333;
+    color: #000;
     text-align: center;
 }
 
@@ -265,7 +265,7 @@
 
 .portfolio-container .reference-name {
     font-weight: bold;
-    color: #333;
+    color: #000;
 }
 
 .portfolio-container .reference-contact p {
