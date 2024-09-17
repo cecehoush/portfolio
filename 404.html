@@ -1,14 +1,10 @@
-<script type="text/javascript"> 
-    /* 
-    Is the current path anything other than / (the root)? 
-    If not root, append the current path (like /portfolio, /roadmap) to index.html, 
-    so when user is redirected, React Router can pick up the original URL and display the right content.
-    */
+<script type="text/javascript">
     var redirectTo = window.location.pathname;
-    if (redirectTo !== "/") {
-      window.location = "/index.html" + redirectTo;
+    if (redirectTo !== "/" && !redirectTo.includes("index.html")) {
+      window.location.href = "/index.html";
     }
   </script>
+  
   
 
 <!--  
