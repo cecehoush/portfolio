@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    // If the user tries to access any page, redirect them to the index.html file
+    var redirectTo = window.location.pathname;
+    if (!redirectTo.startsWith("/index.html")) {
+      window.location = "/index.html";
+    }
+  </script>
+
+
+<!--  
+When a user refreshes a page GitHub Pages doesn't know about the React routes, 
+so it looks for a physical file or directory (ex. portfolio or roadmap), which doesn't exist (causing a 404 error).
+
+By redirecting to index.html (the single-page app's entry point), 
+React Router takes over and correctly interprets the URL (ex. /portfolio or /roadmap) to display the intended content (based on routing logic in App.js).
+-->
