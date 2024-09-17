@@ -1,3 +1,23 @@
+    <script type="text/javascript">
+      // Check if a redirect is present in the query string,
+      // convert it back into the correct url and add it to the
+      // browser's history using window.history.replaceState(...),
+      // This won't cause browser to attempt to load new url.
+      // When single page app is loaded further down in this file,
+      // correct url will be waiting in the browser's history for
+      // single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
