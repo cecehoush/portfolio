@@ -1,11 +1,15 @@
-<script type="text/javascript">
-    // If the user tries to access any page, redirect them to the index.html file
+<script type="text/javascript"> 
+    /* 
+    Is the current path anything other than / (the root)? 
+    If not root, append the current path (like /portfolio, /roadmap) to index.html, 
+    so when user is redirected, React Router can pick up the original URL and display the right content.
+    */
     var redirectTo = window.location.pathname;
-    if (!redirectTo.startsWith("/index.html")) {
-      window.location = "/index.html";
+    if (redirectTo !== "/") {
+      window.location = "/index.html" + redirectTo;
     }
   </script>
-
+  
 
 <!--  
 When a user refreshes a page GitHub Pages doesn't know about the React routes, 
