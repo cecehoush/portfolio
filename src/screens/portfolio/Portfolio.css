@@ -1,7 +1,6 @@
 .portfolio-container {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0; 
-    /* background-color: #e3e3e3; */
     color: #000;
 }
 
@@ -71,7 +70,7 @@
     line-height: 1.4;
 }
 
-/* Work Experience Section with Images */
+/* Work Experience Images */
 .portfolio-container .experience-item {
     display: flex;
     flex-direction: column;
@@ -191,49 +190,62 @@
     transform: translateY(-2px);
 }
 
-/* Awards Section */
-.portfolio-container .awards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+/* Awards & Achievements Section */
 
-.portfolio-container .award-item {
+.awards-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .award-item {
     background-color: #fff;
-    border-radius: 20px;
-    padding: 0px 10px 10px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-container .award-item:hover {
+  }
+  
+  .award-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.portfolio-container .award-item h3 {
-    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .award-icon {
+    font-size: 2rem;
+    margin-right: 20px;
     color: #990012;
-}
-
-.portfolio-container .award-item p {
+  }
+  
+  .award-content {
+    flex: 1;
+  }
+  
+  .award-content h3 {
+    color: #990012;
+    margin-bottom: 10px;
+  }
+  
+  .award-content p {
+    color: #333;
     font-size: 0.9rem;
-    color: #000;
-    text-align: center;
-}
-
-.portfolio-container .award-item a {
-    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .award-content a {
     color: #990012;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-}
-
-.portfolio-container .award-item a:hover {
+  }
+  
+  .award-content a:hover {
     color: #660000;
-}
+    text-decoration: underline;
+  }
 
 /* Education Section */
 .portfolio-container .education-timeline {

@@ -3,20 +3,20 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import NavBar from '../../navigation/NavBar';
 import './Portfolio.css';
-import rainbowImage from '../../assets/rainbow.png';
 import sustainabilityHub from '../../assets/sustainabilityHub.jpg';
 import rowdyTeam from '../../assets/rowdyTeam.jpg';
 import shPresenting from '../../assets/shPresenting.png';
 import sillySH from '../../assets/sillySH.png';
 import dansCookies from '../../assets/dansCookies.jpg';
 import teamRowdy from '../../assets/teamRowdy.jpg';
+import AwardsSection from './AwardsSection';  
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
     const experienceRef = useRef(null);
     const skillsRef = useRef(null);
-    const awardsRef = useRef(null);
+    // const awardsRef = useRef(null);
     const educationRef = useRef(null);
     const referencesRef = useRef(null);
 
@@ -174,7 +174,7 @@ const Portfolio = () => {
 
         animateSection(experienceRef.current, '.experience-item');
         animateSection(skillsRef.current, '.skill-category');
-        animateSection(awardsRef.current, '.award-item');
+        // animateSection(awardsRef.current, '.award-item');
         animateSection(educationRef.current, '.education-item');
         animateSection(referencesRef.current, '.reference-row');
     }, []);
@@ -230,7 +230,10 @@ const Portfolio = () => {
                     </div>
                 </section>
 
-                <section className="awards" ref={awardsRef}>
+                <AwardsSection awardsData={awardsData} />
+
+
+                {/* <section className="awards" ref={awardsRef}>
                     <h2>Awards & Achievements</h2>
                     <div className="awards-container">
                         {awardsData.map((award, index) => (
@@ -245,7 +248,7 @@ const Portfolio = () => {
                             </div>
                         ))}
                     </div>
-                </section>
+                </section> */}
 
                 <section className="education" ref={educationRef}>
                     <h2>Education</h2>
