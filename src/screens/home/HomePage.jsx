@@ -32,8 +32,8 @@ const HomePage = () => {
                         <a href="mailto:carolannehoush@gmail.com"><MdEmail size={26} /></a>
                         {/* <a href="tel:+7203299609"><FaPhone size={22} /></a> */}
                     </div>
-                    <h1>Welcome to My Website!!</h1>
-                    <p>Nice to meet you, I'm Carolanne Housh but I go by Cece!</p>
+                    <h1>Welcome To My Website!!</h1>
+                    <p>Nice to meet you, I'm Carolanne Housh but I go by Cece! </p>
                 </section>
 
                 <hr className="border-t border-gray-300 my-8" />

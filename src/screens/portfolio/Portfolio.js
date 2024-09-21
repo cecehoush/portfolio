@@ -3,6 +3,13 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import NavBar from '../../navigation/NavBar';
 import './Portfolio.css';
+import rainbowImage from '../../assets/rainbow.png';
+import sustainabilityHub from '../../assets/sustainabilityHub.jpg';
+import rowdyTeam from '../../assets/rowdyTeam.jpg';
+import shPresenting from '../../assets/shPresenting.png';
+import sillySH from '../../assets/sillySH.png';
+import dansCookies from '../../assets/dansCookies.jpg';
+import teamRowdy from '../../assets/teamRowdy.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,33 +26,31 @@ const Portfolio = () => {
             company: "Roadrunner Connect, MSU Denver",
             date: "June 2024 — Present",
             details: [
-                "Collaborated on 'Roadrunner Connect', an interactive campus map app designed to enhance community engagement. Involved in designing the user interface, and developing both front-end and back-end components using Flutter and Dart.",
-                "Implemented a check-in system, comment/photo uploads, and a rewards system (raffles, contests, leaderboards, badges, challenges) to incentivize participation.",
-                "Employed Agile methodologies in a team of 5, managing tasks and progress through ZenHub. Utilized Git and GitHub for version control and collaboration, ensuring efficient project execution and team collaboration."
+                "Collaborated on Roadrunner Connect, an interactive campus map app designed to enhance community engagement. Involved in designing the user interface, and developing both front-end and back-end components using Flutter (Dart) for the mobile app, MongoDB/Node.js for the back-end, and React (JavaScript, CSS) for the website.",
+                "Implemented a check-in system, a friends system, comment/photo uploads, and a rewards system with contests (giveaways & leaderboards), badges, challenges to incentivize participation on campus.",
+                "Employed Agile methodologies in a team of 5 doing two week sprints, taking the initiative to manage tasks and progress through ZenHub, and doing daily standup ceremonies. Utilized Git and GitHub for version control and collaboration, ensuring efficient project execution and team collaboration.",
+                "Proactively Integrated Firebase for authentication (Google/iOS sign-in), Gravatar for team profiles, optimized API calls by indexing queries, and deployment in app stores.",
+                "Presented app updates to 15+ stakeholders, created Qualtrics surveys, and incorporated feedback for continuous improvement."
+            ],
+            photos: [
+                { src: rowdyTeam, alt: "Roadrunner Connect App Screenshot" },
+                { src: dansCookies, alt: "Team Collaboration" },
+                { src: teamRowdy, alt: "Project Management Board" }
             ]
         },
-
-/*
-
-Full Stack Developer Intern, MSU Denver
-
-- Contributed to "Roadrunner Connect," an interactive campus map app to enhance community engagement, using Flutter (Dart) for mobile app development and React (JavaScript, CSS) for the accompanying website.
-- Implemented key features like event check-ins, photo uploads, and a rewards system (raffles, badges, contests, leaderboards) to drive user participation.
-- Integrated Firebase for authentication (Google and iOS sign-in), cloud storage, and analytics. Managed Firebase console for database and user authentication.
-- Led the deployment of the app on both iOS and Google Play platforms, ensuring adherence to Apple and Google guidelines.
-- Integrated Google Maps API for campus location mapping and Gravatar for team member profiles on the “About The Team” screen.
-- Collaborated with stakeholders in meetings and presentations, incorporating feedback to refine features.
-- Employed Agile methodologies using ZenHub for task management, Git/GitHub for version control, and worked across a stack involving MongoDB, Node.js, and Google APIs.
-
-*/
-
         {
             title: "Undergraduate Research Assistant",
             company: "Sustainability Hub, MSU Denver",
             date: "September 2023 — June 2024",
             details: [
-                "Sustainability Hub is a National Science Foundation-funded initiative, focused on sustainability data analysis, application prototyping, and machine learning model development under the guidance of the project manager.",
-                "Worked in an Agile environment with a team of 6 researchers creating the UI/UX design to implement a prototype for the sustainability hub application and develop machine learning models to identify patterns within sustainability data, enhancing the project's objectives towards sustainability, data democracy, and inclusivity."
+                "The Sustainability Hub is a National Science Foundation-funded initiative, focused on sustainability data analysis, application prototyping, and machine learning model development under the guidance of the project manager.",
+                "Worked in an Agile environment with a team of 6 researchers creating the UI/UX design to implement a prototype for the sustainability hub application and develop machine learning models to identify patterns within sustainability data, enhancing the project's objectives towards sustainability, data democracy, and inclusivity.",
+                "Presented the project at the Undergraduate Research Symposium for MSU Denver."
+            ],
+            photos: [
+                { src: sustainabilityHub, alt: "Data Analysis Visualization" },
+                { src: shPresenting, alt: "Sustainability Hub Dashboard" }, 
+                { src: sillySH, alt: "Sustainability Hub Dashboard" }
             ]
         },
         {
@@ -53,7 +58,9 @@ Full Stack Developer Intern, MSU Denver
             company: "Discrete Structures and Computer Science 1, MSU Denver",
             date: "January 2024 — Present",
             details: [
-                "Worked as a peer mentor/tutor in the areas of Computer Science and Math (specifically Discrete Structures and Computer Science 1), assisting in lectures, holding weekly office hours, and supporting students with concepts, homework, and projects."
+                "Worked as a peer mentor/tutor in the areas of Computer Science and Math (specifically Discrete Structures and Computer Science 1), assisting in lectures, holding weekly office hours, and supporting students with concepts, homework, and projects.",
+                "Tutored 60+ students in these areas. Conducted one-on-one tutoring sessions for over 20 students, addressing individual learning needs and increasing student exam scores by 12%.", 
+                "Held 8+ office hours weekly, answering questions and providing project guidance, decreasing assignment-related issues and late submissions by 20%."
             ]
         },
         {
@@ -180,14 +187,29 @@ Full Stack Developer Intern, MSU Denver
                     <h2>Work Experience</h2>
                     {workExperienceData.map((exp, index) => (
                         <div key={index} className="experience-item">
-                            <h3>{exp.title}</h3>
-                            <p className="company">{exp.company}</p>
-                            <p className="date">{exp.date}</p>
-                            <ul>
-                                {exp.details.map((detail, i) => (
-                                    <li key={i}>{detail}</li>
-                                ))}
-                            </ul>
+                            <div className="experience-content">
+                                <h3>{exp.title}</h3>
+                                <p className="company">{exp.company}</p>
+                                <p className="date">{exp.date}</p>
+                                <ul>
+                                    {exp.details.map((detail, i) => (
+                                        <li key={i}>{detail}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            {exp.photos && exp.photos.length > 0 && (
+                                <div className="experience-photos-container">
+                                    {exp.photos.map((photo, photoIndex) => (
+                                        <div key={photoIndex} className="experience-photo-container">
+                                            <img 
+                                                src={photo.src} 
+                                                alt={photo.alt} 
+                                                className="experience-photo"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </section>

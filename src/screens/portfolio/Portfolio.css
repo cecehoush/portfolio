@@ -71,6 +71,83 @@
     line-height: 1.4;
 }
 
+/* Work Experience Section with Images */
+.portfolio-container .experience-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-container .experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-container .experience-content {
+    margin-bottom: 20px;
+}
+
+.portfolio-container .experience-photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    justify-content: flex-start;
+}
+
+.portfolio-container .experience-photo-container {
+    flex: 0 0 calc(32% - 20px);
+    max-width: calc(32% - 20px);
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.portfolio-container .experience-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.portfolio-container .experience-photo-container::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 20px;
+    background-color: white;
+    z-index: 1;
+}
+
+.portfolio-container .experience-photo-container:hover .experience-photo {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .portfolio-container .experience-photo-container {
+        flex: 0 0 calc(33.33% - 10px);
+        max-width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-container .experience-photo-container {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
 /* Skills Section */
 .portfolio-container .skills-container {
     display: grid;

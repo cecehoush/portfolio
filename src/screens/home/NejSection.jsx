@@ -40,7 +40,7 @@ const NejSection = () => {
 
     return (
         <section id="nej" className="nej-section">
-            <h2>Welcome to my cat Ineji's World!</h2>
+            <h2>Welcome to my cat Ineji's world!</h2>
             <div className="nej-cloud">
                 <img src={cloudImage2} alt="Nej's Cloud" className="nej-main-cloud" />
                 {nejPhotos.map((photo, index) => {

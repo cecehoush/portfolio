@@ -80,8 +80,8 @@ const AboutMe = () => {
     <div className="about-me-container">
       <h2>About Me</h2>
       <p>
-        I'm a full stack developer and UI/UX designer. For more technical details about me, check out my Portfolio tab!
-        <br></br>
+        I'm a full stack developer and UI/UX designer. 
+        <p>This website is a work in progress, but I hope you find it helpful. For more technical details about me, check out my Portfolio tab!</p>
         Otherwise, here are some things about me :)
       </p>
       <div className="skill-cards-container">
