@@ -91,24 +91,40 @@ const Portfolio = () => {
     const awardsData = [
         {
             title: "DU/MSU Hackathon 2nd Place Award",
-            description: "I co-created 'SpiderByte,' a course-aligned coding challenge website, using Python, Flask, SQLAlchemy, HTML/CSS, PythonTutor, and CodeMirror during a 28-hour hackathon in a team.",
+            description: [
+                "Collaborated in 'Bits Please' team to create 'SpiderByte,' a coding challenge website for classroom learning (similar to Leetcode, but more designed to align with a course's material).",
+                "This was created during a 28+ hour hackathon, after staying awake for 36+ hours, and overall winning 2nd place among 6+ other teams.",
+                "Tools & Technologies: Python, Flask, SQLAlchemy, HTML/CSS, PythonTutor, and CodeMirror.",
+                "Enhanced user experience with PythonTutor for code visualization and CodeMirror for in-browser editing.",
+                "Developed and set up test cases to validate user-submitted code, ensuring accuracy and precision."
+              ],
             link: "https://github.com/cecehoush/BitsPlease-SpiderByte"
         },
         {
             title: "Certificate: Fundamentals of Deep Learning with NVIDIA",
-            description: "I completed NVIDIA's Deep Learning course, gaining expertise in neural network fundamentals and practical implementation."
+            description: [
+                "I completed NVIDIA's Deep Learning course, gaining expertise in neural network fundamentals and practical implementation.",
+                 "I learned how to use TensorFlow and Keras to build deep learning models."
+            ]
         },
         {
             title: "Certificate: SQL Competition Winner",
-            description: "I won first place in MSU Denver's SQL competition for CS 3810 (Principles of Database Systems). I became the first woman to win this competition since it started, making history in a generally male-dominated field.",
+            description: [
+                "I won first place in MSU Denver's SQL competition for CS 3810 (Principles of Database Systems).",
+                "I became the first woman to win this competition since it started, making history in a generally male-dominated field."
+            ]
         },
         {
-            title: "Provost's Honor Roll at MSU Denver",
-            description: "I was recognized for outstanding academic achievement at Metropolitan State University of Denver for each semester."
+            title: "Provost's Honor Roll at Metropolitan State University of Denver",
+            description: [
+                "I was recognized for outstanding academic achievement at MSU Denver (each semester)."
+            ]
         },
         {
             title: "Principal's Honor Roll at East High School",
-            description: "I was awarded a certificate for exceptional academic performance at Denver East High School in 2021."
+            description: [
+                "I was awarded a certificate for exceptional academic performance at Denver East High School in 2021."
+            ]
         }
     ];
 

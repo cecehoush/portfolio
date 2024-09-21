@@ -41,7 +41,15 @@ const AwardsSection = ({ awardsData }) => {
             <div className="award-icon">🏆</div>
             <div className="award-content">
               <h3>{award.title}</h3>
-              <p>{award.description}</p>
+              {Array.isArray(award.description) ? (
+                <ul className="award-description-list">
+                  {award.description.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{award.description}</p>
+              )}
               {award.link && (
                 <a href={award.link} target="_blank" rel="noopener noreferrer">
                   View Project

@@ -196,6 +196,18 @@
     list-style-type: none;
     padding: 0;
   }
+
+  .award-description-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .award-description-list li {
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
   
   .award-item {
     background-color: #fff;
