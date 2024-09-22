@@ -5,12 +5,26 @@ import './HomePage.css';
 import myPicture from '../../assets/myPicture.jpg';
 import cloudImage2 from '../../assets/cloud2.png';
 import cloudImage from '../../assets/cloud.png';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // FaPhone
+import { FaLinkedin, FaGithub, FaInstagram, FaFileDownload } from 'react-icons/fa'; // FaPhone
 import { MdEmail } from 'react-icons/md';
 import AboutMe from './AboutMe';
 import NejSection from './NejSection';
 
 const HomePage = () => {
+    const handleDownload = (fileType) => {
+        const fileUrls = {
+            resume: '/download/CeceHoushResume.pdf',
+            cv: '/download/CeceHoushCV.pdf'
+        };
+        
+        const link = document.createElement('a');
+        link.href = fileUrls[fileType];
+        link.setAttribute('download', ''); 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="relative">
             <NavBar />
@@ -34,6 +48,14 @@ const HomePage = () => {
                     </div>
                     <h1>Welcome To My Website!!</h1>
                     <p>Nice to meet you, I'm Carolanne Housh but I go by Cece! </p>
+                    <div className="download-buttons">
+                        <button onClick={() => handleDownload('resume')} className="download-button">
+                            <FaFileDownload /> Download Resume
+                        </button>
+                        <button onClick={() => handleDownload('cv')} className="download-button">
+                            <FaFileDownload /> Download CV
+                        </button>
+                    </div>
                 </section>
 
                 <hr className="border-t border-gray-300 my-8" />

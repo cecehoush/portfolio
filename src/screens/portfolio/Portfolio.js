@@ -153,20 +153,20 @@ const Portfolio = () => {
         {
             name: "Alyssa Williams",
             phone: "720-470-3778",
-            email: "awilliams7529@gmail.com",
+            email: "awill157@msudenver.edu",
             linkedin: "linkedin.com/in/chillyssa",
             relationship: "Project Manager and mentor during my undergraduate research for the Sustainability Hub"
         },
         {
             name: "Daniel Pittman, Ph.D., CISSP",
-            phone: "303-789-9179",
-            email: "depittman@gmail.com",
+            // phone: "303-789-9179",
+            email: "dpittma8@msudenver.edu",
             linkedin: "linkedin.com/in/danpittman1",
             relationship: "Previous professor and the Principal Investigator for my undergraduate research for the Sustainability Hub and the Project Director for my Roadrunner Connect internship"
         },
         {
             name: "Steve Geinitz",
-            email: "geinitz@gmail.com",
+            email: "geinitz@msudenver.edu",
             linkedin: "linkedin.com/in/geinitz",
             relationship: "Professor for several of my core Computer Science courses and independent studies"
         }
