@@ -83,6 +83,7 @@ While the website is now live at [cecehoush.com](https://cecehoush.com), you can
 - Expand the Portfolio section with project details and demos
 - Expand the About Me section and maybe add more flipping cards
 - Create a new logo
+- Fix clouds to be responsive :(
 
 ## Contact
 
